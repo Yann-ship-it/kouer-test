@@ -18,7 +18,7 @@ export default function Header() {
         </div>
       
     
-<form className="w-[45%] mx-auto"> 
+<form className="max-lg:hidden w-[45%] mx-auto"> 
     
     <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
     <div className="relative">
@@ -32,7 +32,7 @@ export default function Header() {
     </div>
 </form>
 
-<div className="flex gap-5 items-center">
+<div className="flex gap-5 items-center max-lg:hidden">
 
   <div className="flex items-center gap-2">
   <div className="relative w-[40px] h-[40px]">
@@ -79,7 +79,7 @@ export default function Header() {
       </div>
       
 
-    <div className="grid grid-cols-9 gap-10 w-[90%]">
+    <div className="flex justify-around flex-start gap-10 flex-wrap overflow-hidden">
 
       <div className="flex items-center flex-col">  
       <div className="w-[40px] h-[40px] m-auto">

@@ -13,12 +13,13 @@ export default async function Index() {
 
         <div className="relative w-full h-[458px] flex items-center object-contain">
           <Image
+          className="object-cover"
           src="https://yqyvejgankeibaeulahw.supabase.co/storage/v1/object/public/image/bg.webp"
           layout="fill"
           alt="Picture of the author"
         />
           <div className="absolute text-white left-[5%]">
-            <h1 className="text-5xl text-[#4ea04c]">Le meilleur des producteurs<br/>directement chez vous !</h1>
+            <h1 className="max-md:text-3xl text-5xl text-[#4ea04c]">Le meilleur des producteurs<br/>directement chez vous !</h1>
             <div className="py-5">
               <p>Commandez chez Kouer et soutenez l'artisanat local.</p>
               <p>Recevez vos commandes<br/>à domicile en 48h</p>
@@ -49,7 +50,7 @@ export default async function Index() {
         <h2 className="flex justify-center text-[1.6rem] text-[#4ea04c]">Comment ça marche Kouer ?</h2>
           <div className="grid grid-cols-4 px-52 gap-10 max-xl:grid-cols-2 max-xl:px-0">
             <div className="text-center">
-            <div className="relative w-[150px] h-[150px] m-auto">
+            <div className="relative w-[150px] h-[150px] m-auto max-sm:h-[100px] max-sm:w-[100px]">
               <Image
                 src="https://yqyvejgankeibaeulahw.supabase.co/storage/v1/object/public/image/ordinateur.svg"
                 layout="fill"
@@ -60,7 +61,7 @@ export default async function Index() {
               <p className="text-[0.95rem]">Plus de 15.000 produits et 500 producteurs</p>
             </div>
             <div className="text-center">
-            <div className="relative w-[150px] h-[150px] m-auto ">
+            <div className="relative w-[150px] h-[150px] m-auto max-sm:h-[100px] max-sm:w-[100px]">
               <Image
                 src="https://yqyvejgankeibaeulahw.supabase.co/storage/v1/object/public/image/ordinateur.svg"
                 layout="fill"
@@ -71,7 +72,7 @@ export default async function Index() {
               <p className="text-[0.95rem]">Découvrez une nouvelle façon de faire vos courses, directement en ligne</p>
             </div>
             <div className="text-center">
-            <div className="relative w-[150px] h-[150px] m-auto">
+            <div className="relative w-[150px] h-[150px] m-auto max-sm:h-[100px] max-sm:w-[100px]">
               <Image
                 src="https://yqyvejgankeibaeulahw.supabase.co/storage/v1/object/public/image/ordinateur.svg"
                 layout="fill"
@@ -82,7 +83,7 @@ export default async function Index() {
               <p className="text-[0.95rem]">Faites vos courses en circuit court en direct de vos producteurs.</p>
             </div>
             <div className="text-center">
-            <div className="relative w-[150px] h-[150px] m-auto">
+            <div className="relative w-[150px] h-[150px] m-auto max-sm:h-[100px] max-sm:w-[100px]">
               <Image
                 src="https://yqyvejgankeibaeulahw.supabase.co/storage/v1/object/public/image/ordinateur.svg"
                 layout="fill"
@@ -97,8 +98,8 @@ export default async function Index() {
 
         {/* Producteurs */}
 
-        <section className="flex w-[95%] m-auto gap-5 py-10">
-          <div className="w-[50%]">
+        <section className="flex w-[95%] m-auto gap-5 py-10 max-md:flex-col max-md:items-center">
+          <div className="w-[50%] max-sm:w-[100%]">
             <h2 className="text-[#4ea04c] text-[1.6rem]">Des producteurs partenaires de qualités :</h2>
             <p className="text-[0.95rem]">Kouer sélectionne pour vous, des producteurs qui vendent exclusivement des produits artisanaux en direct et qui remplissent les conditions nécessaires pour vous offrir un marché de qualité.</p>
             <p className="text-[0.95rem]">Vous pouvez consulter nos engagements et les valeurs que nous défendons en cliquant sur <span>nos engagements.</span></p>
@@ -107,6 +108,22 @@ export default async function Index() {
           </div>
           <div className="w-full overflow-scroll overflow-y-hidden flex gap-5">
           <div className="relative w-[275px] h-[435px]">
+              <Image
+                className="object-cover rounded-xl"
+                src="https://yqyvejgankeibaeulahw.supabase.co/storage/v1/object/public/image/saucisson.webp?t=2024-09-24T10%3A56%3A59.361Z"
+                layout="fill"
+                alt="Picture of the author"
+                />
+            </div>
+            <div className="relative w-[275px] h-[435px]">
+              <Image
+                className="object-cover rounded-xl"
+                src="https://yqyvejgankeibaeulahw.supabase.co/storage/v1/object/public/image/saucisson.webp?t=2024-09-24T10%3A56%3A59.361Z"
+                layout="fill"
+                alt="Picture of the author"
+                />
+            </div>
+            <div className="relative w-[275px] h-[435px]">
               <Image
                 className="object-cover rounded-xl"
                 src="https://yqyvejgankeibaeulahw.supabase.co/storage/v1/object/public/image/saucisson.webp?t=2024-09-24T10%3A56%3A59.361Z"
@@ -181,6 +198,7 @@ export default async function Index() {
           
         </section>
 
+        
       </main>
       <footer className="mt-20 bg-[#F4F4F4] pt-[60px] px-[43px] font-poppins w-full">
         <div className="flex justify-between mb-[50px] max-sm:flex-col max-sm:gap-[40px] [@media(max-width:450px)]:items-center [@media(max-width:450px)]:gap-[0px]">

@@ -7,7 +7,7 @@ import Image from 'next/legacy/image'
 const products = [
   {
     id: 1,
-    name: "Cannelle en Poudre 20g",
+    name: "Cannelle en Poudre",
     image: "https://yqyvejgankeibaeulahw.supabase.co/storage/v1/object/public/image/glace.jpg", // Replace with actual path
     price: "6.2€",
     quantity: "20g",
@@ -48,7 +48,7 @@ const products = [
   },
   {
     id: 6,
-    name: "Perle de Vanille de Madagascar",
+    name: "Perle de Vanille",
     image: "https://yqyvejgankeibaeulahw.supabase.co/storage/v1/object/public/image/glace.jpg",
     price: "22.65€",
     quantity: "20g",
@@ -191,7 +191,7 @@ const ProductSlider = () => {
             .map((product) => (
               <div
                 key={product.id}
-                className="w-1/7 flex-shrink-0 p-4 bg-white border rounded-lg shadow-lg text-center "
+                className="w-1/7 flex-shrink-0 p-2 bg-white border rounded-lg shadow-lg text-center "
               >  
 
                   <div className="w-[21px] h-[14px] ">
@@ -220,14 +220,21 @@ const ProductSlider = () => {
                   className="h-24 w-full object-cover mb-2"
                 />
                 
-                <div className="flex flex-col justify-between">
+                <div className="flex flex-col justify-between gap-3">
 
-                
-                    <h2 className="text-lg font-bold h-[10px]">{product.name}</h2>
+                    <div>
+                    <h2 className="flex text-start text-color-[#aaa]">{product.name}</h2>
+                    <span className="text-color-[#aaa] text-[10px] flex">DELICES FOREZIENS</span>
+                    </div>
+ 
                     <div className="flex justify-between items-end">
-                      <div className="">
-                        <p className="text-gray-700">{product.price}  {product.quantity}</p>
-                        <p className="text-sm text-gray-500">{product.pricePerKg}</p>
+                      <div className="flex flex-col text-start items-end">
+                        <div className="flex items-center gap-1">
+                        <p className="text-[#4ea04c] text-[20px]">{product.price}</p>
+                        <p className="text-[#aaa] text-[10px]">{product.quantity}</p>
+                        </div>
+                        
+                        <p className="text-[#4ea04c] text-[10px] flex text-star">{product.pricePerKg}</p>
                       </div>
                       
                       <div>
